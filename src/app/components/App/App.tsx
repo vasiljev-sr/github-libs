@@ -1,15 +1,16 @@
 import React, { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import {Layout} from "@app/components/App/Layout";
-
+import { Layout } from '@app/components/App/Layout';
+import { Page } from '@app/components/Page/Page';
 
 export const App: FC = () => {
   return (
-      <>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-          </Route>
-        </Routes>
-      </>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Page />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
