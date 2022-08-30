@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import { ForkIcon } from '@app/components/Icons/ForkIcon';
-import { StarIcon } from '@app/components/Icons/StarIcon';
 import './ShortInfo.css';
+import { StarIcon } from '@components/Icons/StarIcon';
+import { ForkIcon } from '@components/Icons/ForkIcon';
 
 interface ShortInfoProps {
   title: string;

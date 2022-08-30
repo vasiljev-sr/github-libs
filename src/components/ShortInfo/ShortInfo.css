@@ -1,5 +1,5 @@
 .short-info {
-  margin: 20px;
+  width: 230px;
 }
 
 .short-info__title {
@@ -27,7 +27,8 @@
 
 .short-info__item {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 6px;
 }
 
 .short-info__item-icon {
@@ -35,6 +36,9 @@
 }
 
 @media all and (min-width: 744px) and (max-width: 1279px) {
+  .short-info {
+    width: 450px;
+  }
   .short-info__title {
     font-size: 30px;
     line-height: 36px;
