@@ -1,5 +1,5 @@
 .short-info {
-  width: 230px;
+  color: var(--color-text);
 }
 
 .short-info__title {
