@@ -2,23 +2,28 @@ import React, { FC } from 'react';
 import './ShortInfo.css';
 import { StarIcon } from '@components/Icons/StarIcon';
 import { ForkIcon } from '@components/Icons/ForkIcon';
+import { IRepo } from '@app/types';
+import { useAppDispatch } from '@app/hooks';
+import { setActiveRepo } from '@features/reposSlider/slice';
 
-interface ShortInfoProps {
-  title: string;
-  description: string;
-  stars: number;
-  forks: number;
+interface ShortInfoProps extends Omit<IRepo, 'owner' | 'topics' | 'homepage'> {
+  className?: string;
 }
 
-export const ShortInfo: FC<ShortInfoProps> = ({ title, description, stars, forks }) => {
+export const ShortInfo: FC<ShortInfoProps> = ({ name, description, stargazers_count, forks, id }) => {
+  const dispatch = useAppDispatch();
+
+  const onClick = () => {
+    dispatch(setActiveRepo(id));
+  };
   return (
-    <article className="short-info">
-      <h2 className="short-info__title">{title}</h2>
+    <article className="short-info" onClick={onClick}>
+      <h2 className="short-info__title">{name}</h2>
       <p className="short-info__text">{description}</p>
       <div className="short-info__popularity">
         <div className="short-info__item">
           <StarIcon className="short-info__item-icon" />
-          <p className="short-info__item-value">{stars}</p>
+          <p className="short-info__item-value">{stargazers_count}</p>
         </div>
         <div className="short-info__item">
           <ForkIcon className="short-info__item-icon" />
