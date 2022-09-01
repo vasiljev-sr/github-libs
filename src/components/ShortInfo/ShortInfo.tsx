@@ -4,7 +4,7 @@ import { StarIcon } from '@components/Icons/StarIcon';
 import { ForkIcon } from '@components/Icons/ForkIcon';
 import { IRepo } from '@app/types';
 import { useAppDispatch } from '@app/hooks';
-import { setActiveRepo } from '@features/reposSlider/slice';
+import { setActiveRepo, setShowModal } from '@features/reposSlider/slice';
 
 interface ShortInfoProps extends Omit<IRepo, 'owner' | 'topics' | 'homepage'> {
   className?: string;
@@ -15,6 +15,7 @@ export const ShortInfo: FC<ShortInfoProps> = ({ name, description, stargazers_co
 
   const onClick = () => {
     dispatch(setActiveRepo(id));
+    dispatch(setShowModal(true));
   };
   return (
     <article className="short-info" onClick={onClick}>

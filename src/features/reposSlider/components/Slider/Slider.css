@@ -39,16 +39,6 @@
 }
 
 @media all and (min-width: 1280px) {
-  .short-info__title {
-    font-size: 40px;
-    line-height: 47px;
-    margin-bottom: 16px;
-  }
-
-  .short-info__text {
-    margin-bottom: 16px;
-  }
-
   .slider-content-wrapper {
     width: 620px;
   }

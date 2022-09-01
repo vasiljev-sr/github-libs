@@ -6,6 +6,7 @@ import { Slider } from '@features/reposSlider/components/Slider/Slider';
 import { useAppDispatch, useAppSelector } from '@app/hooks';
 import { fetchRepos } from '@features/reposSlider/actions';
 import { ShortInfoSkeleton } from '@components/ShortInfo/ShortInfoSkeleton';
+import { Modal } from '@components/Modal/Modal';
 
 export const Page: FC = () => {
   const { repos, loading } = useAppSelector((state) => state.reposReducer);
@@ -49,6 +50,9 @@ export const Page: FC = () => {
           </Slider>
         </div>
       </section>
+      <Modal>
+        <ShortInfo id={11} name={'222'} description={'adasdasd'} stargazers_count={222} forks={222} />{' '}
+      </Modal>
     </main>
   );
 };

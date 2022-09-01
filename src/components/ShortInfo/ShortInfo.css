@@ -39,9 +39,6 @@
 }
 
 @media all and (min-width: 744px) and (max-width: 1279px) {
-  .short-info {
-    width: 450px;
-  }
   .short-info__title {
     font-size: 30px;
     line-height: 36px;

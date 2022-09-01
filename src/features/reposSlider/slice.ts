@@ -7,6 +7,7 @@ interface InitialState {
   error: string;
   repos: IRepo[];
   activeRepo: IRepo | null;
+  showModal: boolean;
 }
 
 const initialState: InitialState = {
@@ -14,6 +15,7 @@ const initialState: InitialState = {
   error: '',
   repos: [],
   activeRepo: null,
+  showModal: false,
 };
 
 export const reposSlice = createSlice({
@@ -22,6 +24,9 @@ export const reposSlice = createSlice({
   reducers: {
     setActiveRepo(state, action: PayloadAction<number>) {
       state.activeRepo = state.repos.find((item) => item.id === action.payload) as IRepo;
+    },
+    setShowModal(state, action: PayloadAction<boolean>) {
+      state.showModal = action.payload;
     },
   },
   extraReducers: {
@@ -41,4 +46,4 @@ export const reposSlice = createSlice({
 });
 
 export default reposSlice.reducer;
-export const { setActiveRepo } = reposSlice.actions;
+export const { setActiveRepo, setShowModal } = reposSlice.actions;
