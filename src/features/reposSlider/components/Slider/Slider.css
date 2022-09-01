@@ -31,9 +31,7 @@
 
 @media all and (min-width: 744px) and (max-width: 1279px) {
   .slider-content-wrapper {
-    overflow: hidden;
     width: 450px;
-    height: 100%;
   }
   .slider-wrapper {
     justify-content: space-between;
@@ -49,5 +47,12 @@
 
   .short-info__text {
     margin-bottom: 16px;
+  }
+
+  .slider-content-wrapper {
+    width: 620px;
+  }
+  .slider-wrapper {
+    justify-content: space-between;
   }
 }

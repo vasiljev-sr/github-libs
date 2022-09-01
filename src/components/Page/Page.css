@@ -14,7 +14,6 @@
 .page__slider {
   background-color: var(--color-modal-background);
   width: 100%;
-  height: 133px;
   padding: 20px 10px;
 }
 
@@ -28,7 +27,6 @@
     padding: 0;
   }
   .page__slider {
-    height: 156px;
     padding: 30px 20px;
   }
 }
@@ -37,5 +35,16 @@
   .page__title {
     margin-bottom: 60px;
     margin-top: 60px;
+    text-align: center;
+  }
+  .page__slider {
+    background-color: unset;
+    padding: 0;
+  }
+
+  .page__slider-grid {
+    background-color: var(--color-modal-background);
+    grid-column: 2/12;
+    padding: 30px 20px;
   }
 }

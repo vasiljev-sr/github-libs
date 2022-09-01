@@ -34,6 +34,9 @@
 .short-info__item-icon {
   color: var(--color-text);
 }
+.short-info__item-value-skeleton {
+  width: 45px;
+}
 
 @media all and (min-width: 744px) and (max-width: 1279px) {
   .short-info {
@@ -48,6 +51,9 @@
   .short-info__text {
     margin-bottom: 12px;
   }
+  .short-info__item-value-skeleton {
+    width: 60px;
+  }
 }
 
 @media all and (min-width: 1280px) {
@@ -59,5 +65,9 @@
 
   .short-info__text {
     margin-bottom: 16px;
+  }
+
+  .short-info__item-value-skeleton {
+    width: 80px;
   }
 }
