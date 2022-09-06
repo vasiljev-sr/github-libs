@@ -5,7 +5,7 @@ cache:
     - node_modules/
 
 before_script:
-  - rm -rf build
+  - rm -rf dist
   - CI=false npm install
 
 pages:
@@ -13,8 +13,8 @@ pages:
   script:
     - CI=false npm run build
     - rm -rf public
-    - cp build/index.html build/404.html
-    - mv build public
+    - cp dist/index.html dist/404.html
+    - mv dist public
   artifacts:
     paths:
       - public
