@@ -10,7 +10,7 @@ const setupStore = store();
 
 ReactDOM.render(
   <Provider store={setupStore}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <App />
     </BrowserRouter>
   </Provider>,
