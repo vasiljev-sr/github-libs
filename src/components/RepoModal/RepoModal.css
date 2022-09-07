@@ -1,5 +1,5 @@
 .repo-modal {
-  padding: 56px 0 20px 20px;
+  padding: 56px 20px 0 20px;
 }
 
 .repo-modal__org {
@@ -55,7 +55,7 @@
 
 @media all and (min-width: 744px) and (max-width: 1279px) {
   .repo-modal {
-    padding: 130px 0 40px 40px;
+    padding: 130px 40px 0 40px;
   }
   .repo-modal_close-icon {
     top: 55px;
@@ -68,5 +68,18 @@
     width: 750px;
     background-color: var(--color-background);
     position: relative;
+  }
+  .repo-modal__name {
+    margin-bottom: 20px;
+  }
+  .repo-modal__description {
+    margin-bottom: 20px;
+  }
+
+  .repo-modal__link {
+    margin-bottom: 20px;
+  }
+  .repo-modal__topics {
+    gap: 12px;
   }
 }
