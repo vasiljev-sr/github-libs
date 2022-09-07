@@ -1,0 +1,72 @@
+.repo-modal {
+  padding: 56px 0 20px 20px;
+}
+
+.repo-modal__org {
+  margin-bottom: 4px;
+}
+
+.repo-modal__name {
+  margin-bottom: 12px;
+}
+.repo-modal__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.repo-modal__link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.repo-modal__link-icon {
+  color: var(--color-text);
+}
+.repo-modal__link-item {
+  color: var(--color-accent);
+}
+
+.repo-modal__topics {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.repo-modal__topic {
+  padding: 4px 8px;
+  background-color: var(--color-accent);
+  border-radius: 8px;
+  color: var(--color-white);
+}
+
+.repo-modal_close-icon {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+@media all and (min-width: 744px) and (max-width: 1279px) {
+  .repo-modal {
+    padding: 130px 0 40px 40px;
+  }
+  .repo-modal_close-icon {
+    top: 55px;
+    right: 43px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .repo-modal {
+    width: 750px;
+    background-color: var(--color-background);
+    position: relative;
+  }
+}
