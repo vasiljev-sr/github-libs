@@ -4,14 +4,20 @@ import { useAppDispatch, useAppSelector } from '@app/hooks';
 import { CSSTransition } from 'react-transition-group';
 import classNames from 'classnames';
 import { setShowModal } from '@features/reposSlider/slice';
-import './Modal.css';
+import './ModalWrapper.css';
 
 interface ModalProps extends HTMLAttributes<HTMLElement> {
   alignX?: 'center' | 'left' | 'right';
   alignY?: 'center' | 'top' | 'bottom';
 }
 
-export const Modal: FC<ModalProps> = ({ alignX = 'center', alignY = 'top', className, children, ...restProps }) => {
+export const ModalWrapper: FC<ModalProps> = ({
+  alignX = 'center',
+  alignY = 'top',
+  className,
+  children,
+  ...restProps
+}) => {
   const { showModal } = useAppSelector((state) => state.reposReducer);
   const dispatch = useAppDispatch();
   const onClose = () => {

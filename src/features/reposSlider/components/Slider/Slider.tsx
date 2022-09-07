@@ -7,6 +7,33 @@ export const Slider: FC = ({ children }) => {
   const childrens = children as React.ReactChildren[];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(childrens.length);
+  const [touchPosition, setTouchPosition] = useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const touchDown = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    const touchDown = touchPosition;
+
+    if (touchDown === null) {
+      return;
+    }
+
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchDown - currentTouch;
+
+    if (diff > 5) {
+      next();
+    }
+
+    if (diff < -5) {
+      prev();
+    }
+
+    setTouchPosition(null);
+  };
 
   useEffect(() => {
     setLength(childrens.length);
@@ -36,7 +63,7 @@ export const Slider: FC = ({ children }) => {
         <button className="left-arrow" onClick={prev}>
           <ArrowRight />
         </button>
-        <div className="slider-content-wrapper">
+        <div className="slider-content-wrapper" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
           <div className="slider-content" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {childrens}
           </div>

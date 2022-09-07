@@ -13,6 +13,7 @@
 }
 
 .slider-content-wrapper {
+  cursor: pointer;
   overflow: hidden;
   width: 229px;
   height: 100%;
