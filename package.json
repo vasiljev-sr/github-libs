@@ -1,6 +1,5 @@
 {
   "name": "github-libs",
-  "homepage": "https://vasilev-sr.github.io/github-libs/",
   "scripts": {
     "eslint": "eslint --ext .js,.ts,.tsx ./",
     "stylelint": "stylelint \"src/{**/*,*}.css\"",
