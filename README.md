@@ -1,3 +1,3 @@
 # Most popular js repositories
 
-Покажем пользователей гитхаба!
+Топ 30 библиотек по javaScript.
